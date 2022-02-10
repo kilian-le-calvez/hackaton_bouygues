@@ -1,0 +1,683 @@
+{
+	"info": {
+		"_postman_id": "392b291a-5725-4590-ade5-dbc1e001c9bd",
+		"name": "GameOfTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "For fun",
+			"item": [
+				{
+					"name": "checkEmail_AuthCode",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://bbox.ai/auth/callback",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "nk85Tgy6kVgtfeR2",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "GameOfTech12",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token Auth Code",
+									"type": "string"
+								},
+								{
+									"key": "challengeAlgorithm",
+									"value": "S256",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "iban",
+									"value": "98732918723987231",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/v1/customer-management​​/email-addresses​/check",
+							"protocol": "https",
+							"host": [
+								"open",
+								"api",
+								"sandbox",
+								"bouyguestelecom",
+								"fr​"
+							],
+							"path": [
+								"ap4",
+								"v1",
+								"customer-management​​",
+								"email-addresses​",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkIban_AuthCode",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize",
+									"type": "string"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://bbox.ai/auth/callback",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "nk85Tgy6kVgtfeR2",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "GameOfTech12",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Token Auth Code",
+									"type": "string"
+								},
+								{
+									"key": "challengeAlgorithm",
+									"value": "S256",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "client_authentication",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "iban",
+									"value": "98732918723987231",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/customer-management/v1/ibans/check",
+							"protocol": "https",
+							"host": [
+								"open",
+								"api",
+								"sandbox",
+								"bouyguestelecom",
+								"fr​"
+							],
+							"path": [
+								"ap4",
+								"customer-management",
+								"v1",
+								"ibans",
+								"check"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createShopingCart_ClientCred",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fingerPrint\": \"hello\",\r\n  \"shoppingCartId\": \"192991991\",\r\n  \"uuid\": \"109830198\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/product-ordering/v1/orders",
+							"protocol": "https",
+							"host": [
+								"open",
+								"api",
+								"sandbox",
+								"bouyguestelecom",
+								"fr​"
+							],
+							"path": [
+								"ap4",
+								"product-ordering",
+								"v1",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "checkIban_ClientCred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"iban\": \"FR7630001007941234567890185\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/customer-management/v1/ibans/check",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"customer-management",
+						"v1",
+						"ibans",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkEmail_ClientCred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailAddress\":\"autom@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/v1/customer-management/email-addresses/check",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"v1",
+						"customer-management",
+						"email-addresses",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createOrders_ClientCred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"scheme\" : [\r\n        {\r\n            \"products\" : [\r\n                { \"id\" : \"6606\" }\r\n            ],\r\n            \"childrenOnlineProtection\": false,\r\n            \"autoEnabledSimCard\": true\r\n        }\r\n    ],\r\n    \"billingAddress\": {\r\n        \"locality\": \"LEVALLOIS-PERRET\",\r\n        \"postCode\": \"92300\",\r\n        \"streetName\": \"RUE MARCEL CERDAN\",\r\n        \"streetNumber\": \"5\"\r\n    },\r\n    \"iban\": \"FR4310278023829K1596K619301\",\r\n    \"marketingCommunicationConsent\": true,\r\n    \"shippingAddress\": {\r\n        \"firstName\": \"OLGA\",\r\n        \"lastName\": \"SLAVINA\",\r\n        \"locality\": \"LEVALLOIS-PERRET\",\r\n        \"postCode\": \"92300\",\r\n        \"streetName\": \"RUE MARCEL CERDAN\",\r\n        \"streetNumber\": \"5\",\r\n        \"title\": \"MME\"\r\n    },\r\n    \"shippingOfferType\": \"LA_POSTE\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/product-ordering/v1/shopping-carts",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"product-ordering",
+						"v1",
+						"shopping-carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createShopingCart_AuthCode",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://bbox.ai/auth/callback",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "nk85Tgy6kVgtfeR2",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "GameOfTech12",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Token Auth Code",
+							"type": "string"
+						},
+						{
+							"key": "challengeAlgorithm",
+							"value": "S256",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fingerPrint\": \"hello\",\r\n  \"shoppingCartId\": \"192991991\",\r\n  \"uuid\": \"109830198\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/product-ordering/v1/shopping-carts",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"product-ordering",
+						"v1",
+						"shopping-carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dataConso_AuthCode",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize",
+							"type": "string"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://bbox.ai/auth/callback",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "nk85Tgy6kVgtfeR2",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "GameOfTech12",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Token Auth Code",
+							"type": "string"
+						},
+						{
+							"key": "challengeAlgorithm",
+							"value": "S256",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "client_authentication",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.sandbox.bouyguestelecom.fr​/ap4/customer-management/v1/usage-consumptions/mobile-data",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"customer-management",
+						"v1",
+						"usage-consumptions",
+						"mobile-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "normalizePostalAdress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "at-1df4f1e7-db17-43bf-9954-0d7aa3425521",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"additionalInformation\": \"klezjlkjzef\",\r\n  \"locality\": \"paris\",\r\n  \"postCode\": \"75000\",\r\n  \"postOfficeBox\": \"CEDEX 08\",\r\n  \"streetName\": \"A Dumas\",\r\n  \"streetNumber\": \"4\",\r\n  \"valSuggestion\": \"Top\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/v1/customer-management/postal-addresses/normalization",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"v1",
+						"customer-management",
+						"postal-addresses",
+						"normalization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eligibility_ClientCred",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"phoneNumber\": \"+33611827752\", \"rioCode\": \"01P09SA09098\" }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://open.api.sandbox.bouyguestelecom.fr​/ap4/v1/customer-management/portabilities/check-eligibility",
+					"protocol": "https",
+					"host": [
+						"open",
+						"api",
+						"sandbox",
+						"bouyguestelecom",
+						"fr​"
+					],
+					"path": [
+						"ap4",
+						"v1",
+						"customer-management",
+						"portabilities",
+						"check-eligibility"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token",
+				"type": "string"
+			},
+			{
+				"key": "tokenType",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "accessToken",
+				"value": "at-9ba38dd2-f49e-442b-bc75-05687a3a63fa",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "p6jJMTRxPpmCGcW5",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "GameOfTech4",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "App 11 token",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "client_credentials",
+				"type": "string"
+			},
+			{
+				"key": "challengeAlgorithm",
+				"value": "S256",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

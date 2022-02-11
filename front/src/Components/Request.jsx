@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 const tokenUrl = "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token?grant_type=authorization_code&code="
+const consoUrl = "https://api.sandbox.bouyguestelecom.fr/ap4/customer-management/v1/usage-consumptions/mobile-data"
 
 const basicToken = "GameOfTech12"
 const basicToken64 = "R2FtZU9mVGVjaDEyOm5rODVUZ3k2a1ZndGZlUjI="
@@ -30,6 +31,21 @@ class Request {
         }).catch((err) => {
             throw(err)
         });
+    }
+
+    async bouyguesGetConso(accessToken) {
+        var config = {
+            headers: {
+                "Authorization": "Bearer " + accessToken,
+            }
+        };
+        return axios.get(consoUrl, {
+            "headers": {"Authorization": "Bearer " + accessToken}
+        }).then((res) => {
+            return res
+        }).catch((err) => {
+            throw(err)
+        })
     }
 
     async getImage() {

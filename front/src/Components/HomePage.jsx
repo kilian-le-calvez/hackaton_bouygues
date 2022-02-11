@@ -46,6 +46,9 @@ function HomePage() {
     }, []);
     return (
         <div className={styles.center}>
+            <button onClick={() => {
+                window.location.href = "http://localhost:3000/login"
+            }}>LOGIN</button>
             <img className={styles.img} src={url} alt={url}></img>
             <Params></Params>
         </div>

@@ -1,0 +1,18 @@
+.center {
+    width: 60%;
+    margin: auto;
+    top: 7.143vw;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+.form input {
+    font-size: 30px;
+}
+
+.img {
+    width: 100%;
+}

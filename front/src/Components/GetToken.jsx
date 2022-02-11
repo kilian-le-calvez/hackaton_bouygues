@@ -8,7 +8,7 @@ function GetToken() {
     } catch {
         code = "undefined"
     }
-    return(<></>)
+    console.log(code)
     Request.getToken(code).then((res) => {
         console.log(res)
     }).catch((err) => {

@@ -29,7 +29,6 @@ def calcAverage(arr):
 fileImgName = "data_conso.png"
 
 def getImage(sec, min):
-    print(sec)
     if len(sec) < 1:
         return []
     figure, axis = plt.subplots(1, 2)

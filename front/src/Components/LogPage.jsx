@@ -1,7 +1,9 @@
 import React from 'react'
 import Cors from 'cors'
 
-const client_id = "GameOfTech12"
+// const client_id = "GameOfTech12"
+const client_id = "partenaire.elba.bouyguestelecom.fr"
+
 const url_callback = "http://localhost:3000/getToken"
 
 const url = "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize?" +
@@ -13,7 +15,7 @@ const fixedUrl = "https://oauth2.sandbox.bouyguestelecom.fr/ap4/authorize?client
 function LogPage() {
   
     function redirect() {
-        window.location.href = fixedUrl;
+        window.location.href = url;
     }
     console.log(url)
     return (

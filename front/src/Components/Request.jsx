@@ -2,9 +2,14 @@ import axios from 'axios'
 
 const tokenUrl = "https://oauth2.sandbox.bouyguestelecom.fr/ap4/token?grant_type=authorization_code&code="
 const consoUrl = "https://api.sandbox.bouyguestelecom.fr/ap4/customer-management/v1/usage-consumptions/mobile-data"
+// const consoUrl = "https://api.sandbox.bouyguestelecom.fr/ap0/customer-management/v1/usage-consumptions/mobile-data"
 
-const basicToken = "GameOfTech12"
-const basicToken64 = "R2FtZU9mVGVjaDEyOm5rODVUZ3k2a1ZndGZlUjI="
+// const basicToken = "GameOfTech12"
+const basicToken = "partenaire.elba.bouyguestelecom.fr"
+//partenaire.elba.bouyguestelecom.fr:nk6XFsmDJS6dmePr
+// const basicToken64 = "R2FtZU9mVGVjaDEyOm5rODVUZ3k2a1ZndGZlUjI="
+const basicToken64 = "cGFydGVuYWlyZS5lbGJhLmJvdXlndWVzdGVsZWNvbS5mcjpuazZYRnNtREpTNmRtZVBy"
+
 const redirectUri = "http://localhost:3000/getToken"
 
 const apiUrl = "http://127.0.0.1:8000"
@@ -39,9 +44,7 @@ class Request {
                 "Authorization": "Bearer " + accessToken,
             }
         };
-        return axios.get(consoUrl, {
-            "headers": {"Authorization": "Bearer " + accessToken}
-        }).then((res) => {
+        return axios.get(consoUrl, config).then((res) => {
             return res
         }).catch((err) => {
             throw(err)
